@@ -23,11 +23,10 @@ header{
   top: 0;
   left: 0;
   padding: 0 100px;
-  box-sizing: border-box;
-  width: 100%;
   background: #262626;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 header .logo{
   color: #fff;
   height: 50px;
@@ -37,14 +36,16 @@ header .logo{
   font-weight: bold;
 }
 
+
+
 header nav {
   float: right;
 }
 
 
-header nav ul {
+header  nav ul {
   margin: 0;
-  padding 0;
+  padding: 0;
   display: flex;
 }
 header nav ul li {
@@ -53,35 +54,27 @@ header nav ul li {
 }
 header nav ul li.sub-menu:before{
 content: '\f0d7';
-font-family: fontAwesome;
-position: absolute;
-line-height: 50px;
-color: #fff;
-right: 5px;
+  font-family: fontAwesome;
+  position: absolute;
+  line-height: 50px;
+  color: #fff;
+  right: 5px;
+
 }
+
 header nav ul li ul {
   position: absolute;
   left: 0;
   background: #333;
   display: none;
 }
-
 header nav ul li:hover ul{
   display: block;
-
 }
-
-header ul li:hover {
-  background: #2196f3;
-  width: 100%;
-}
-
-header nav ul li ul li {
+header nav ul li ul li{
   display: block;
-  width: 200%;
+  width: 200px;
 }
-
-
 header nav ul li a {
   height: 50px;
   line-height: 50px;
@@ -91,22 +84,50 @@ header nav ul li a {
   display: block;
 }
 
+header ul li:hover {
+  background: #2196f3;
+}
+header ul li:last-child{
+  border-right: none;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 0 20px;
+  color: #fff;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 44px;
+  width: 200px;
+  left: 0;
+  display: block;
+  background: #000;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+} 
+header ul li:hover ul{
+  opacity: 1;
+  visibility: visible;
+} 
+header ul li ul li {
+  border-right: none;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
 
 
 @media (max-width: 768px){
-  header ul {
-    display: block;
-    text-align: center;
+  header nav ul {
+float: center;
+width: 50%;
   }
 
-header ul li {
-  display: block;
+
 }
 
-header ul li {
-  width: 100%;
-  z-index: 1;
-}
+
 </style>
 
 
